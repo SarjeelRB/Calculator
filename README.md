@@ -8,7 +8,7 @@ from kivy.uix.textinput import TextInput
 
 class MainApp(App):
     def build(self):
-        self.icon="C:\\Users\SARJEEL\Desktop\Sarjeel\icon.jpg"
+        self.icon=r"C:\\Users\SARJEEL\Desktop\Sarjeel\icon.jpg"
         self.operators=["/","*","+","-"]
         self.last_was_operator=None
         self.last_button=None
@@ -54,13 +54,13 @@ class MainApp(App):
         button_text= instance.text
 
         if button_text=='C':
-            self.solution.text=" "
+            self.solution.text= ""
 
         else:
             if current and(
                 self.last_was_operator and button_text in self.operators):
                 return
-            elif current ==" " and  button_text in self.operators:
+            elif current == "" and  button_text in self.operators:
                 return
             else:
 
